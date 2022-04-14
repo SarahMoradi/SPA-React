@@ -1,18 +1,19 @@
 import "./App.css";
 
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import AboutUs from "./component/AboutUs";
-import HomePage from "./component/HomePage";
-import NotFound from "./component/NotFound";
+import Layout from './component/Layout/Layout'
+import routes from "./component/routes";
 
 function App() {
   return (
-        <Routes>
-          <Route path="/" exact={true} element={<HomePage />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/not-found" element={<NotFound />} />
-        </Routes>
+    <Layout>
+      <Routes>
+      {routes.map((route) => (
+        <Route { ...route } />
+      ))}
+    </Routes>
+    </Layout>
   );
 }
 

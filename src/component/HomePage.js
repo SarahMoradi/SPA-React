@@ -1,11 +1,5 @@
-import Layout from "./Layout/Layout";
-
 const HomePage = () => {
-  return (
-    <Layout>
-      <h3>this is homepage</h3>
-    </Layout>
-  );
+  return <h3>this is homepage</h3>;
 };
 
 export default HomePage;
