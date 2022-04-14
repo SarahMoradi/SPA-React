@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 const Navigation = (props) => {
   const items = [
     { name: "Home", to: "/", exact: true },
-    { name: "About-us", to: "/about-us", exact: true },
-    { name: "Blogs", to: "/blogs", exact: true },
+    { name: "About us", to: "/about-us" },
+    { name: "Blogs", to: "/blogs" },
   ];
   return (
     <>
@@ -13,9 +13,7 @@ const Navigation = (props) => {
           {items.map((item) => {
             return (
               <div key={item.to}>
-                <NavLink to={item.to} exact={item.exact || false}>
-                  {item.name}
-                </NavLink>
+                <NavLink to={item.to}>{item.name}</NavLink>
               </div>
             );
           })}
