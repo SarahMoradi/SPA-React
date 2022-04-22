@@ -1,0 +1,9 @@
+.nav-item{
+    padding: 10px !important;
+    margin: 20px;
+    background-color: rgb(49, 111, 111);
+    border-radius: 5px;
+}
+.activeTab{
+    color: blue;
+}
